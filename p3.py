@@ -24,6 +24,65 @@ preguntas = [
         'respuestas': ['a) Madrid', 'b) Barcelona', 'c) Valencia'],
         'respuesta_correcta': 'a'
     },
+
+    {
+        'pregunta': '¿Cuál es el lugar más frío de la Tierra??',
+        'respuestas': ['a) Antártida', 'b) Finlandia.', 'c) Alaska'],
+        'respuesta_correcta': 'a'
+    },
+
+
+    {
+        'pregunta': '¿Cuál es el lugar organo que consume más energía en el cuerpo humano??',
+        'respuestas': ['a) Corazón', 'b) Cerebro.', 'c) Pancreas'],
+        'respuesta_correcta': 'b'
+    },
+
+
+    {
+        'pregunta': '¿Cuál es el país más pequeño del mundo??',
+        'respuestas': ['a) Nauru', 'b) Mónaco.', 'c) Vaticano'],
+        'respuesta_correcta': 'c'
+    },
+
+
+
+    {
+        'pregunta': '¿Cuál es la formula del hierro??',
+        'respuestas': ['a) Fe2O3', 'b) Fe4O5.', 'c) H2O'],
+        'respuesta_correcta': 'a'
+    },
+
+
+
+    {
+        'pregunta': '¿Quién pinto la monaliza??',
+        'respuestas': ['a) Pablo picasso', 'b) Van Gogh.', 'c) Leonardo Da Vinci'],
+        'respuesta_correcta': 'c'
+    },
+
+
+
+    {
+        'pregunta': '¿Qué planeta del sistema solar tiene más lunas??',
+        'respuestas': ['a) Júpiter', 'b) Marte.', 'c) Saturno'],
+        'respuesta_correcta': 'a'
+    },
+
+
+    {
+        'pregunta': '¿Quién fue el auténtico padre de la electricidad??',
+        'respuestas': ['a) Thomas Edison', 'b) Nikola Tezla.', 'c) Albert Einstein'],
+        'respuesta_correcta': 'b'
+    },
+
+    {
+        'pregunta': '¿Qué colores tiene la bandera de Paraguay, en orden de arriba hacía abajo??',
+        'respuestas': ['a)Rojo,azúl y blanco ', 'b) blanco, rojo y azúl.', 'c)Rojo,blanco y azúl'],
+        'respuesta_correcta': 'c'
+    },
+
+
     {
         'pregunta': '¿En qué año fue la Revolución Francesa?',
         'respuestas': ['a) 1789', 'b) 1815', 'c) 1848'],
@@ -42,7 +101,7 @@ preguntas = [
     {
         'pregunta': '¿Cuál es el continente más poblado?',
         'respuestas': ['a) asia', 'b) europa', 'c) america'],
-        'respuesta_correcta' : 'a'
+        'respuesta_correcta': 'a'
     }
 ]
 
@@ -58,6 +117,8 @@ def hacer_pregunta():
     if respuesta_jugador == pregunta['respuesta_correcta']:
         print('¡Correcto!')
         return True
+    elif respuesta_jugador != "a" or "b" or "c":
+        print("Respuesta invalida")
     else:
         print('¡Incorrecto!')
         return False
@@ -118,5 +179,3 @@ while True:
     else:
         jugador2['posicion'] = aplicar_castigo(jugador2['posicion'], 2)
     print(f'Posición actual: {jugador2["posicion"]}, Aciertos: {jugador2["aciertos"]}')
-
-
